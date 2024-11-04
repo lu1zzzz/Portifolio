@@ -1,0 +1,181 @@
+
+
+.theme-light {
+    --background-color: #f0f0f0;
+    --text-color: #202020;
+    --sidebar-background: #ffffff;
+    --sidebar-width: 360px;
+    --text-color: #333;
+    --menu-icon-size: 30px;
+    --shadow: black;
+}
+
+.theme-dark {
+    --background-color: #202020;
+    --text-color: #f0f0f0;
+    --sidebar-background: #141414;
+    --sidebar-width: 360px;
+    --menu-icon-size: 30px;
+    --shadow: rgb(59, 59, 59);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.menu-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: var(--menu-icon-size);
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.sidebar {
+    width: var(--sidebar-width);
+    background-color: var(--sidebar-background);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -400px;
+    transition: right 0.3s ease;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo{
+    position: absolute;
+    top: 10px;
+    left: 40px;
+
+}
+
+
+.profile img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+.sidebar h2{
+    text-align: center;
+    font-size: 50px;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.menu a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 30px;
+}
+
+.social-icons{
+    margin: 2em 0;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: var(--text-color);
+}
+.social-icons svg{
+    width: 40px;
+    height: 40px;
+    fill: var(--text-color);
+}
+
+.sidebar.open {
+    right: 0;
+}
+
+
+
+.content {
+    padding: 40px;
+    max-width: 100%;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.biography {
+    text-align: center;
+    background-color: var(--sidebar-background);
+    padding: 40px 60px;
+    border-radius: 30px;
+    margin: 5vh  auto;
+    box-shadow: var(--shadow) 20px 20px 20px;
+}
+
+
+.biography p{
+    font-size: 28px;
+}
+.content h1{
+    margin-top: 5vh;
+    font-size: 60px;
+    text-align: center;
+}
+
+.skills {
+    display: flex;
+    justify-content: space-around;
+    margin: 5vh 0;
+}
+
+.skills img {
+    width: 100px;
+    height: auto;
+}
+
+.footer {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.footer .contact-info {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+#theme-toggle {
+    margin-top: 20px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 28px;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        font-size: 24px;
+    }
+
+    .skills {
+        flex-direction: column;
+    }
+
+    .skills img {
+        margin-bottom: 15px;
+    }
+
+    .footer .contact-info {
+        flex-direction: column;
+    }
+}
